@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .my-custom-style {
+        @apply py-3 px-3 bg-white border border-gray-300 rounded-lg focus:outline-none;
+    }
+  }

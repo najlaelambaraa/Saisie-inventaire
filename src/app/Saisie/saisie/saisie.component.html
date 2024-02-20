@@ -1,0 +1,49 @@
+<div class="min-h-screen bg-gray-100 p-4 flex flex-col">
+    <input [(ngModel)]="titre" type="text" placeholder="Titre" class="mb-4 py-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    <input [(ngModel)]="calcul" type="text" placeholder="Calcule" class="mb-2 py-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    <div class="flex items-center mb-4">
+      <input type="text" placeholder="Resultat" class="flex-grow py-2 px-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500" readonly />
+      <select [(ngModel)]="unite" class="py-2 px-3 border-t border-b border-r border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="m2">m2</option>
+        <option value="m3">m3</option>
+        <option value="ml">ml</option>
+        <option value="u">u</option>
+        <option value="l">l</option>
+      </select>
+    </div>
+   
+    <div class="grid grid-cols-4 gap-4">
+        <button class="my-custom-style">(</button>
+        <button class="my-custom-style">)</button>
+        <button class="my-custom-style">AC</button>
+        <button class="py-3 px-3 bg-orange-200 border border-gray-300 rounded-lg focus:outline-none">÷</button>
+      </div>
+
+      <div class="grid grid-cols-4 gap-4">
+        <button class="my-custom-style">7</button>
+        <button class="my-custom-style">8</button>
+        <button class="my-custom-style">9</button>
+        <button class="py-3 px-3 bg-orange-200 border border-gray-300 rounded-lg focus:outline-none">x</button>
+      </div>
+
+      <div class="grid grid-cols-4 gap-4">
+        <button class="my-custom-style">4</button>
+        <button class="my-custom-style">5</button>
+        <button class="my-custom-style">6</button>
+        <button class="py-3 px-3 bg-orange-200 border border-gray-300 rounded-lg focus:outline-none">-</button>
+      </div>
+      <div class="grid grid-cols-4 gap-4">
+        <button class="my-custom-style">1</button>
+        <button class="my-custom-style">2</button>
+        <button class="my-custom-style">3</button>
+        <button class="py-3 px-3 bg-orange-200 border border-gray-300 rounded-lg focus:outline-none">+</button>
+      </div>
+      <div class="grid grid-cols-4 gap-4">
+        <button class="my-custom-style">0</button>
+        <button class="my-custom-style">,</button>
+        <button (click)="Calculer()" class="py-3 px-3 bg-orange-200 border border-gray-300 rounded-lg focus:outline-none">=</button>
+        <button class="py-3 px-3 bg-orange-200 border border-gray-300 rounded-lg focus:outline-none">-></button>
+      </div>
+
+  </div>
+  

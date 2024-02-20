@@ -1,20 +1,30 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { SaisieComponent } from "./Saisie/saisie/saisie.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  template: `
-  <div class="p-2 w-full flex gap-2 bg-sky-500">
-  <h1 class="text-2xl text-white">Saisie d'inventaire</h1>
-  <a class="hover:text-sky-200" routerLink="/messenger">Saisie</a>
-  <a class="hover:text-sky-200" routerLink="/project">inventaire</a>
+    selector: 'app-root',
+    standalone: true,
+    template: `
+  <div class="bg-gray-100 h-screen">
+  <div class="grid grid-flow-col justify-stretch">
+    <div class="flex flex-1">
+      <button class="flex-1 bg-orange-400 hover:bg-sky-300 text-white font-bold py-2 px-4 rounded mr-2" (click)="button = 'Saisie'">Saisie</button>
+      <button class="flex-1 bg-orange-400 hover:bg-sky-300 text-white font-bold py-2 px-4 rounded">Inventaire</button>
+    </div>
   </div>
+</div>
+@if (button === 'Saisie') {
+  <app-saisie></app-saisie>
+} 
+
   <router-outlet></router-outlet>
-`
+`,
+    imports: [CommonModule, RouterOutlet, SaisieComponent]
 })
 export class AppComponent {
   title = 'saisie-inventaire';
+  button: string = '';
+  
 }
