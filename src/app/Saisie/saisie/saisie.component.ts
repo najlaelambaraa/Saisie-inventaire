@@ -34,8 +34,6 @@ export class SaisieComponent {
     this.item.unite = ''; 
   } 
   constructor(private dataService: DataService) {}
-
-  
   save() {
     const resultat = { titre: this.item.titre, resultat: this.item.resultat };
     this.dataService.saveItem(resultat);

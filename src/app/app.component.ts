@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { SaisieComponent } from "./Saisie/saisie/saisie.component";
@@ -22,6 +22,7 @@ import { InventaireComponent } from "./Inventaire/inventaire/inventaire.componen
   <app-inventaire></app-inventaire>
 } 
 </div>
+
   <router-outlet></router-outlet>
 `,
     imports: [CommonModule, RouterOutlet, SaisieComponent, InventaireComponent]
@@ -29,5 +30,5 @@ import { InventaireComponent } from "./Inventaire/inventaire/inventaire.componen
 export class AppComponent {
   title = 'saisie-inventaire';
   button: string = '';
-  
+
 }

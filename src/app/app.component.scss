@@ -1,0 +1,22 @@
+.controls {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 768px) {
+    .controls {
+      display: none; 
+    }
+    
+    .content-container {
+      flex-direction: row; 
+      justify-content: space-evenly;
+    }
+  }
+  
+ 
