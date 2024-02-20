@@ -3,7 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
-    .my-custom-style {
+    .button-style-gray {
         @apply py-3 px-3 bg-white border border-gray-300 rounded-lg focus:outline-none;
+    }
+    .button-style {
+        @apply py-3 px-3 bg-orange-200 border border-gray-300 rounded-lg focus:outline-none;
     }
   }

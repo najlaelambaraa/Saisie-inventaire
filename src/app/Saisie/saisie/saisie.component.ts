@@ -8,17 +8,27 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './saisie.component.scss'
 })
 export class SaisieComponent {
-  titre: string = '';
-  calcul: string = '';
-  resultat: number | null = null;
-  unite: string = '';
-  Calculer(){
+  public item= {
+  titre: '',
+  calcul:  '',
+  resultat:'',
+  unite:  '',
+  };
+  calculate(){
     try {
-      this.resultat = eval(this.calcul);
+      this.item.resultat = eval(this.item.calcul);
     } catch (e) {
-      this.resultat = null;
-      console.error('Erreur de calcul', e);
+      this.item.resultat = "";
+      console.error('Error Calculate', e);
     }
   }
-  
+  addCalcul(value: string){
+    this.item.calcul += value;
+  }
+  clear() {
+    this.item.titre = '';
+    this.item.calcul = '';
+    this.item.resultat = '';
+    this.item.unite = ''; 
+  }
 }
