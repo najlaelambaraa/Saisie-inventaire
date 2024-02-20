@@ -1,11 +1,8 @@
-<div class="flex flex-col h-screen">
-    <div class="flex-grow p-4">
-     
-      <div class="mb-4">
-      <label></label>
-      </div>
+ <div>
+    <div *ngFor="let item of savedItems" class="p-4 mb-4 bg-gray-100 rounded-lg shadow flex justify-between items-center">
+        <p class="text-lg font-semibold text-gray-800">{{ item.titre }}</p>
+        <p class="font-normal text-gray-600">{{ item.resultat }}</p>
     </div>
-   
     <div class="p-4 bg-white shadow-md">
       <div class="flex justify-around">
         <button class="bg-orange-200 hover:bg-orange-400 font-bold py-2 px-4 rounded-l">

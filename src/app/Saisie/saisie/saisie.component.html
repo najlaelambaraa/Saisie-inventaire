@@ -16,18 +16,18 @@
         <button (click)="addCalcul('(')" class="button-style-gray">(</button>
         <button (click)="addCalcul(')')" class="button-style-gray">)</button>
         <button (click)="clear()" class="button-style-gray">AC</button>
-        <button (click)="addCalcul('÷')" class="my-custom-style-2">÷</button>
+        <button (click)="addCalcul('÷')" class="button-style">÷</button>
       </div>
 
       <div class="grid grid-cols-4 gap-4">
         <button (click)="addCalcul('7')" class="button-style-gray">7</button>
         <button (click)="addCalcul('8')" class="button-style-gray">8</button>
         <button (click)="addCalcul('9')" class="button-style-gray">9</button>
-        <button (click)="addCalcul('x')" class="button-style">x</button>
+        <button (click)="addCalcul('*')" class="button-style">x</button>
       </div>
 
       <div class="grid grid-cols-4 gap-4">
-        <button class="my-custom-style">4</button>
+        <button class="button-style-gray">4</button>
         <button (click)="addCalcul('5')"class="button-style-gray">5</button>
         <button (click)="addCalcul('6')" class="button-style-gray">6</button>
         <button (click)="addCalcul('-')" class="button-style">-</button>
@@ -39,10 +39,10 @@
         <button (click)="addCalcul('+')" class="button-style">+</button>
       </div>
       <div class="grid grid-cols-4 gap-4">
-        <button (click)="addCalcul('0')" class="my-custom-style">0</button>
-        <button (click)="addCalcul(',')" class="my-custom-style">,</button>
-        <button (click)="calculate()" class="py-3 px-3 bg-orange-200 border border-gray-300 rounded-lg focus:outline-none">=</button>
-        <button class="py-3 px-3 bg-orange-200 border border-gray-300 rounded-lg focus:outline-none">-></button>
+        <button (click)="addCalcul('0')" class="button-style-gray">0</button>
+        <button (click)="addCalcul(',')" class="button-style-gray">,</button>
+        <button (click)="calculate()" class="button-style">=</button>
+        <button (click)="save()" class="button-style">-></button>
       </div>
 
   </div>

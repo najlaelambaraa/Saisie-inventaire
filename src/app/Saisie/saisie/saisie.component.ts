@@ -1,5 +1,6 @@
 import { Component, inject} from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DataService } from '../../data.service';
 @Component({
   selector: 'app-saisie',
   standalone: true,
@@ -14,6 +15,7 @@ export class SaisieComponent {
   resultat:'',
   unite:  '',
   };
+  savedItems: { titre: string, resultat: string }[] = [];
   calculate(){
     try {
       this.item.resultat = eval(this.item.calcul);
@@ -30,5 +32,16 @@ export class SaisieComponent {
     this.item.calcul = '';
     this.item.resultat = '';
     this.item.unite = ''; 
+  } 
+  constructor(private dataService: DataService) {}
+
+  
+  save() {
+    const resultat = { titre: this.item.titre, resultat: this.item.resultat };
+    this.dataService.saveItem(resultat);
+    
   }
+  
+   
+  
 }
